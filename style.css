@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3c434e;
+  font-family: "Segoe UI", Arial, sans-serif;
+  padding: 16px;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("background.jpg") center/cover no-repeat;
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: -2;
+}   
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(251, 244, 232, 0.75);
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  background: rgba(255, 247, 237, 0.95);
+  border: 1px solid #e7d5c0;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 16px 30px rgba(60, 64, 78, 0.12);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.form-panel {
+  padding: 18px;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: rgb(186, 96, 111);
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #636b75;
+}
+
+input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #d6c4ae;
+  background: #fff8f0;
+  color: #2f3139;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #a79d8f;
+}
+
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #d4a16a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #b47b3f;
+  transform: translateY(-1px);
+}
+
+.image-panel {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #e7d5c0;
+}
+
+.image-panel img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: auto;
+  max-height: 240px;
+}
+
+@media (max-width: 760px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 18px;
+  }
+
+  .image-panel img {
+    min-height: 220px;
+  }
+}
