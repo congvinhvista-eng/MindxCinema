@@ -62,6 +62,14 @@ body::after {
   padding-right: 18px !important;
 }
 
+.form-panel h2 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 1.8rem;
+  color: #a94f72;
+}
+
+
 h1 {
   margin-bottom: 18px;
   font-size: 2rem;
@@ -75,6 +83,20 @@ label {
   margin-top: 16px;
   font-size: 0.95rem;
   color: #636b75;
+}
+
+.remember-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #636b75;
+}
+
+.remember-label input {
+  width: auto;
+  margin: 0;
 }
 
 input {

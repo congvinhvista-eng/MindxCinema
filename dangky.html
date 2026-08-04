@@ -21,13 +21,18 @@
               <p>Đăng nhập để tiếp tục xem phim</p>
             </div>
           </div>
+          <h2>(登録)Đăng ký</h2>
           <label for="username">Username:</label>
           <input type="text" id="username" name="username" />
 
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" />
 
-          <button type="submit">Đăng ký</button>
+          <label class="remember-label">
+            <input type="checkbox" id="registerRemember" /> Ghi nhớ mật khẩu(パスワードを記憶する)
+          </label>
+
+          <button type="button" id="registerButton">Đăng ký</button>
           <p class="register-text">
             Đã có tài khoản?
             <a href="dangnhap.html">Đăng nhập</a>
@@ -43,5 +48,6 @@
         </div>
       </div>
     </div>
+    <script src="auth.js"></script>
   </body>
 </html>

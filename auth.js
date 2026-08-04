@@ -1,0 +1,86 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const registerButton = document.getElementById("registerButton");
+  const loginButton = document.getElementById("loginButton");
+  const registerRemember = document.getElementById("registerRemember");
+  const rememberMe = document.getElementById("rememberMe");
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+
+  function loadAccount() {
+    const stored = localStorage.getItem("softrollAccount");
+    return stored ? JSON.parse(stored) : null;
+  }
+
+  function saveAccount(account) {
+    localStorage.setItem("softrollAccount", JSON.stringify(account));
+  }
+
+  function loadRemembered() {
+    const stored = localStorage.getItem("softrollRemember");
+    return stored ? JSON.parse(stored) : null;
+  }
+
+  function saveRemembered(account) {
+    if (account) {
+      localStorage.setItem("softrollRemember", JSON.stringify(account));
+    } else {
+      localStorage.removeItem("softrollRemember");
+    }
+  }
+
+  if (registerButton) {
+    registerButton.addEventListener("click", function () {
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value;
+      if (!username || !password) {
+        alert("Vui lòng nhập username và password.");
+        return;
+      }
+
+      saveAccount({ username, password });
+      if (registerRemember && registerRemember.checked) {
+        saveRemembered({ username, password });
+      }
+
+      alert("Đăng ký thành công. Vui lòng vào trang Đăng nhập.");
+      window.location.href = "dangnhap.html";
+    });
+  }
+
+  if (loginButton) {
+    const remembered = loadRemembered();
+    if (remembered) {
+      usernameInput.value = remembered.username || "";
+      passwordInput.value = remembered.password || "";
+      if (rememberMe) {
+        rememberMe.checked = true;
+      }
+    }
+
+    loginButton.addEventListener("click", function () {
+      const account = loadAccount();
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value;
+
+      if (!account) {
+        alert("Chưa có tài khoản. Vui lòng đăng ký trước.");
+        return;
+      }
+
+      if (account.username !== username || account.password !== password) {
+        alert("Username hoặc password không đúng.");
+        return;
+      }
+
+      if (rememberMe && rememberMe.checked) {
+        saveRemembered({ username, password });
+      } else {
+        saveRemembered(null);
+      }
+
+      alert("Đăng nhập thành công!");
+      // Redirect to home or another page after login.
+      window.location.href = "index.html";
+    });
+  }
+});
