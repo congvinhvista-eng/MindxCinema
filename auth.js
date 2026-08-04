@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       alert("Login successful!");
+      localStorage.setItem("softrollCurrentUser", username);
       // Redirect to home or another page after login.
       window.location.href = "index.html";
     });

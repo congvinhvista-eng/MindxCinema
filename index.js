@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const accountName = document.getElementById("accountName");
+  if (accountName) {
+    const currentUser = localStorage.getItem("softrollCurrentUser");
+    accountName.textContent = currentUser || "Account";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("signupBtn");
   if (!btn) {
     return;

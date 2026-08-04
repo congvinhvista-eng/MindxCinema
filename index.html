@@ -1,17 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Phim</a></li>
-            <li><a href="news.html.html">News</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoftRoll</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body class="home-page">
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="nav-brand" href="index.html">
+          <img src="logo.png" alt="SoftRoll" />
+          <span>SoftRoll</span>
+        </a>
+        <ul class="nav-links">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="#anime">Anime</a></li>
+          <li><a href="#news">News</a></li>
         </ul>
-    </nav>
-</body>
+        <div class="nav-actions">
+          <span class="account-name" id="accountName">Account</span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="featured-anime" id="anime">
+      <img class="featured-image" src="gotoubun.jpg" alt="The Quintessential Quintuplets" />
+      <section class="featured-content">
+        <img class="featured-logo" src="gotoubunlogo.png" alt="The Quintessential Quintuplets" />
+        <p class="featured-meta"><span>13+</span> • Sub | Dub • Comedy, Romance, School</p>
+        <p class="featured-description">
+          Futaro Uesugi becomes a tutor for five identical sisters with completely different personalities.
+          His goal is to help them graduate — before an unexpected romance begins.
+        </p>
+        <div class="featured-actions">
+          <a href="#watch" class="watch-button"> START WATCHING E1</a>
+
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
