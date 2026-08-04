@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const username = usernameInput.value.trim();
       const password = passwordInput.value;
       if (!username || !password) {
-        alert("Vui lòng nhập username và password.");
+        alert("Please enter username and password.");
         return;
       }
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveRemembered({ username, password });
       }
 
-      alert("Đăng ký thành công. Vui lòng vào trang Đăng nhập.");
+      alert("Registration successful. Please go to the Log In page.");
       window.location.href = "dangnhap.html";
     });
   }
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const password = passwordInput.value;
 
       if (!account) {
-        alert("Chưa có tài khoản. Vui lòng đăng ký trước.");
+        alert("No account found. Please sign up first.");
         return;
       }
 
       if (account.username !== username || account.password !== password) {
-        alert("Username hoặc password không đúng.");
+        alert("Username or password is incorrect.");
         return;
       }
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         saveRemembered(null);
       }
 
-      alert("Đăng nhập thành công!");
+      alert("Login successful!");
       // Redirect to home or another page after login.
       window.location.href = "index.html";
     });
