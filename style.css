@@ -25,7 +25,7 @@ body  {
    min-height: 100vh;
    color: var(--ink);
    font-family: "Segoe UI", Arial, sans-serif;
-   background: #f9e8dc url("background.jpg") center/cover fixed;
+   background: #f9e8dc url("image/background.jpg") center/cover fixed;
 }
 
 
@@ -62,8 +62,8 @@ a  {
    backdrop-filter: blur(14px);
 }
 
-
 .nav-brand  {
+   border: none !important;
    display: inline-flex;
    align-items: center;
    gap: 10px;
@@ -78,9 +78,8 @@ a  {
 .nav-brand img  {
    width: 40px;
    height: 40px;
-   border-radius: 12px;
    object-fit: cover;
-   box-shadow: 0 5px 14px rgba(174, 57, 95, .22);
+;
 }
 
 
@@ -285,7 +284,7 @@ a  {
 }
 
 .hero-note span  {
-   color: #ffd4e0;
+   color: #070707;
    font-size: .75rem;
    font-weight: 800;
    letter-spacing: .14em;
@@ -295,13 +294,15 @@ a  {
    margin-top: 7px;
    line-height: 1.4;
    font-size: .9rem;
+   color: #070707 !important;
 }
 
 
 
 .watch-page  {
    min-height: calc(100vh - 74px);
-   padding: clamp(30px, 5vw, 70px);
+   height: 200%;
+   padding: 50px 0 20vh;
    background: linear-gradient(135deg, rgba(255,248,243,.82), rgba(249,217,225,.6));
 }
 
@@ -311,6 +312,7 @@ a  {
    color: #9d385c;
    font-weight: 750;
    text-decoration: none;
+   margin-left: 28px;
 }
 
 .player-card  {
@@ -599,3 +601,47 @@ button:hover  {
   }
 }
 
+.ss2 {
+   max-width: 125px;
+   position: absolute;
+   left: 400px;
+}
+
+.movie {
+   max-width: 125px;
+   position: absolute;
+   left: 550px;
+}
+
+
+.special {
+   max-width: 125px;
+   position: absolute;
+   left: 700px;
+}
+
+.special2 {
+   max-width: 125px;
+   position: absolute;
+   left: 850px;
+}
+
+.ss1 {
+   max-width: 125px;
+   position: absolute;
+   left: 250px;
+}
+
+.ss2 {
+   max-width: 125px;
+   position: absolute;
+   left: 400px;
+}
+
+a {
+   text-decoration: none;
+   color: #9d385c;
+   font-weight: 750;
+   margin-left: 28px;
+   border: 1px solid #9d385c;
+}
