@@ -41,6 +41,7 @@ body::before  {
 
 a  {
    color: inherit;
+   border: none !important;
 }
 
 
@@ -158,6 +159,7 @@ a  {
    object-fit: cover;
    object-position: center;
    mask-image: linear-gradient(to left, #000 72%, transparent);
+   background: blur(0px 10px 0px);
 }
 
 
@@ -614,7 +616,6 @@ button:hover  {
    left: 550px;
 }
 
-
 .special {
    max-width: 125px;
    position: absolute;
@@ -633,10 +634,122 @@ button:hover  {
    left: 250px;
 }
 
-.ss2 {
-   max-width: 125px;
-   position: absolute;
-   left: 400px;
+/* My Dress-Up Darling card */
+.anime {
+   padding: clamp(48px, 7vw, 88px) clamp(24px, 6vw, 90px);
+   background: linear-gradient(135deg, #fff8f3 0%, #f9d9e1 100%);
+}
+
+.anime-heading {
+   margin: 0 0 28px;
+   color: #5e2940;
+   font-size: clamp(2rem, 4vw, 3.2rem);
+   letter-spacing: -.05em;
+}
+
+.anime-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+   gap: 24px;
+}
+
+.anime-card {
+   overflow: hidden;
+   display: flex;
+   border: 1px solid rgba(198, 93, 130, .18);
+   border-radius: 18px;
+   background: rgba(255, 255, 255, .8);
+   box-shadow: 0 14px 32px rgba(103, 47, 70, .14);
+   transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.anime-card:hover {
+   transform: translateY(-7px);
+   box-shadow: 0 22px 40px rgba(103, 47, 70, .22);
+}
+
+.tff-card {
+   border-color: rgba(126, 91, 169, .25);
+}
+
+.anime-info img {
+   display: block;
+   width: 100%;
+   aspect-ratio: 2 / 3;
+   object-fit: cover;
+}
+
+.anime-info,
+.tff {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.anime-info h2 {
+   margin: 18px 18px 7px;
+   color: #57263b;
+   font-size: 1.15rem;
+   line-height: 1.25;
+}
+
+.anime-info p {
+   margin: 0 18px 18px;
+   color: #896879;
+   font-size: .9rem;
+}
+
+.anime-info a {
+   display: block;
+   margin: auto 18px 18px;
+   padding: 11px 14px;
+   border: 0;
+   border-radius: 9px;
+   color: #fff;
+   background: linear-gradient(135deg, #e96b94, #c94973);
+   font-weight: 800;
+   text-align: center;
+   text-decoration: none;
+}
+
+.anime-info a:hover {
+   background: linear-gradient(135deg, #d95682, #ad365e);
+}
+
+.tff img {
+   display: block;
+   width: 100%;
+   aspect-ratio: 2 / 3;
+   object-fit: cover;
+}
+
+.tff h2 {
+   margin: 18px 18px 7px;
+   color: #4c355f;
+   font-size: 1.15rem;
+   line-height: 1.25;
+}
+
+.tff p {
+   margin: 0 18px 18px;
+   color: #806f8e;
+   font-size: .9rem;
+}
+
+.tff a {
+   display: block;
+   margin: auto 18px 18px;
+   padding: 11px 14px;
+   border-radius: 9px;
+   color: #fff;
+   background: linear-gradient(135deg, #a57cc8, #79529e);
+   font-weight: 800;
+   text-align: center;
+   text-decoration: none;
+}
+
+.tff a:hover {
+   background: linear-gradient(135deg, #8d62b4, #674285);
 }
 
 a {

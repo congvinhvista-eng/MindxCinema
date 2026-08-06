@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!ss2) return;
 
   ss2.addEventListener("click", () => {
-    window.location.href = "ss2-tqq.html";
+    window.location.href = "tqq/ss2-tqq.html";
   });
 });
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!movie) return;
 
   movie.addEventListener("click", () => {
-    window.location.href = "movie-tqq.html";
+    window.location.href = "tqq/movie-tqq.html";
   });
 });
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!special) return;
 
   special.addEventListener("click", () => {
-    window.location.href = "spc-tqq.html";
+    window.location.href = "tqq/spc-tqq.html";
   });
 });
 
@@ -70,6 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!special2) return;
 
   special2.addEventListener("click", () => {
-    window.location.href = "spc2-tqq.html";
+    window.location.href = "tqq/spc2-tqq.html";
   });
 });
