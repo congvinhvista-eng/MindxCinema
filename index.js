@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const accountName = document.getElementById("accountName");
+
   if (accountName) {
     const currentUser = localStorage.getItem("softrollCurrentUser");
-    accountName.textContent = currentUser || "Account";
+    accountName.textContent = currentUser || "Sign in";
+    accountName.href = currentUser ? "#account" : "dangnhap.html";
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("signupBtn");
-  if (!btn) {
-    return;
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const signupButton = document.getElementById("signupBtn");
 
-  btn.addEventListener("click", function () {
+  if (!signupButton) return;
+
+  signupButton.addEventListener("click", () => {
     window.location.href = "dangky.html";
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("loginBtn");
-  if (!btn) {
-    return;
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const loginButton = document.getElementById("loginBtn");
 
-  btn.addEventListener("click", function () {
+  if (!loginButton) return;
+
+  loginButton.addEventListener("click", () => {
     window.location.href = "dangnhap.html";
   });
 });

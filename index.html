@@ -3,42 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoftRoll</title>
+    <title>SoftRoll — Watch anime, your way</title>
     <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
   </head>
   <body class="home-page">
     <header class="site-header">
       <nav class="navbar" aria-label="Main navigation">
-        <a class="nav-brand" href="index.html">
-          <img src="logo.png" alt="SoftRoll" />
-          <span>SoftRoll</span>
-        </a>
-        <ul class="nav-links">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="#anime">Anime</a></li>
-          <li><a href="#news">News</a></li>
-        </ul>
-        <div class="nav-actions">
-          <span class="account-name" id="accountName">Account</span>
-        </div>
+        <a class="nav-brand" href="index.html"><img src="logo.png" alt="SoftRoll" /><span>SoftRoll</span></a>
+        <ul class="nav-links"><li><a class="active" href="index.html">Home</a></li><li><a href="#anime">Anime</a></li><li><a href="#details">About</a></li></ul>
+        <div class="nav-actions"><a class="account-name" id="accountName" href="dangnhap.html">Sign in</a></div>
       </nav>
     </header>
-
     <main class="featured-anime" id="anime">
       <img class="featured-image" src="gotoubun.jpg" alt="The Quintessential Quintuplets" />
       <section class="featured-content">
+        <p class="eyebrow">FEATURED THIS WEEK</p>
         <img class="featured-logo" src="gotoubunlogo.png" alt="The Quintessential Quintuplets" />
-        <p class="featured-meta"><span>13+</span> • Sub | Dub • Comedy, Romance, School</p>
-        <p class="featured-description">
-          Futaro Uesugi becomes a tutor for five identical sisters with completely different personalities.
-          His goal is to help them graduate — before an unexpected romance begins.
-        </p>
-        <div class="featured-actions">
-          <a href="#watch" class="watch-button"> START WATCHING E1</a>
-
-        </div>
+        <p class="featured-meta"><span>13+</span> <b>•</b> Sub | Dub <b>•</b> Comedy, Romance, School</p>
+        <p class="featured-description">Futaro Uesugi becomes a tutor for five identical sisters with completely different personalities. His goal is to help them graduate — before an unexpected romance begins.</p>
+        <div class="featured-actions"><a href="watch-tqq.html" class="watch-button"><span>▶</span> Start watching</a><a href="#details" class="details-button">More details</a></div>
       </section>
+      <aside class="hero-note" id="details"><span>01</span><p>New episodes and timeless favorites, all in one cozy place.</p></aside>
     </main>
   </body>
 </html>
