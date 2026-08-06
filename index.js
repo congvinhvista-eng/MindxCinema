@@ -64,3 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "spc-tqq.html";
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const special2 = document.getElementById("special2");
+  if (!special2) return;
+
+  special2.addEventListener("click", () => {
+    window.location.href = "spc2-tqq.html";
+  });
+});

@@ -502,12 +502,14 @@ button:hover  {
    color: #786a75;
    font-size: .88rem;
    text-align: center;
+   border: none !important;
 }
 
 .register-text a  {
    color: #c0436b;
    font-weight: 800;
    text-decoration: none;
+      border: none !important;
 }
 
 .image-panel  {
@@ -516,7 +518,6 @@ button:hover  {
 }
 
 .image-panel::after  {
-   content: "Welcome to SoftRoll";
    position: absolute;
    left: 28px;
    bottom: 28px;
