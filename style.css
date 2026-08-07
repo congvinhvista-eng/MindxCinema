@@ -5,6 +5,9 @@
    --pink: #dd5f87;
    --pink-dark: #ba3f69;
    --line: rgba(93, 56, 76, .14);
+   --primary-gradient: linear-gradient(135deg, #e96b94, #c94973);
+   --primary-gradient-hover: linear-gradient(135deg, #d95682, #ad365e);
+   --primary-shadow: 0 9px 18px rgba(192,53,101,.2);
 }
 
 
@@ -366,7 +369,7 @@ body:not(.home-page)  {
 }
 
 .container  {
-   width: min(940px, 100%);
+   width: min(700px, 100%);
    min-height: min(690px, calc(100vh - 56px));
    padding: 12px;
    border: 1px solid rgba(255,255,255,.8);
@@ -380,16 +383,13 @@ body:not(.home-page)  {
    min-height: 666px;
    height: 100%;
    display: grid;
-   grid-template-columns: 1.04fr .96fr;
-   overflow: hidden;
-   border-radius: 18px;
-}
+   grid-template-columns: 1fr;
 
 .form-panel  {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   padding: 42px clamp(28px, 5vw, 58px);
+   padding: 30px clamp(28px, 5vw, 58px);
    background: rgba(255,253,250,.74);
 }
 
@@ -487,16 +487,16 @@ button  {
    border: 0;
    border-radius: 10px;
    color: white;
-   background: linear-gradient(135deg, #e96b94, #c94973);
-   box-shadow: 0 9px 18px rgba(192,53,101,.2);
+   background: var(--primary-gradient);
+   box-shadow: var(--primary-shadow);
    font: inherit;
    font-weight: 750;
    cursor: pointer;
-   transition: transform .2s;
+   transition: transform .2s, box-shadow .15s;
 }
 
 button:hover  {
-   transform: translateY(-2px);
+   box-shadow: 0 12px 24px rgba(192,53,101,.24);
 }
 
 .register-text  {
@@ -706,14 +706,14 @@ button:hover  {
    border: 0;
    border-radius: 9px;
    color: #fff;
-   background: linear-gradient(135deg, #e96b94, #c94973);
+   background: var(--primary-gradient);
    font-weight: 800;
    text-align: center;
    text-decoration: none;
 }
 
 .anime-info a:hover {
-   background: linear-gradient(135deg, #d95682, #ad365e);
+   background: var(--primary-gradient-hover);
 }
 
 .tff img {
@@ -742,14 +742,60 @@ button:hover  {
    padding: 11px 14px;
    border-radius: 9px;
    color: #fff;
-   background: linear-gradient(135deg, #a57cc8, #79529e);
+   background: var(--primary-gradient);
    font-weight: 800;
    text-align: center;
    text-decoration: none;
 }
 
 .tff a:hover {
-   background: linear-gradient(135deg, #8d62b4, #674285);
+   background: var(--primary-gradient-hover);
+}
+
+a {
+   text-decoration: none;
+   color: #ffa26d;
+   font-weight: 750;
+   margin-left: 28px;
+   border: 1px solid #ffa26d;
+}
+
+
+.horimiya img {
+   display: block;
+   width: 100%;
+   aspect-ratio: 2 / 3;
+   object-fit: cover;
+   height: 72%;
+}
+
+.horimiya h2 {
+   margin: 18px 18px 7px;
+   color: #57263b;
+   font-size: 1.15rem;
+   line-height: 1.25;
+}
+
+.horimiya p {
+   margin: 0 18px 18px;
+   color: #806f8e;
+   font-size: .9rem;
+}
+
+.horimiya a {
+   display: block;
+   margin: auto 18px 18px;
+   padding: 11px 14px;
+   border-radius: 9px;
+   color: #fff;
+   background: var(--primary-gradient);
+   font-weight: 800;
+   text-align: center;
+   text-decoration: none;
+}
+
+.horimiya a:hover {
+   background: var(--primary-gradient-hover);
 }
 
 a {
